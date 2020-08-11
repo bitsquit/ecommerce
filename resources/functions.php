@@ -25,6 +25,8 @@ function fetch_array($result){
     return mysqli_fetch_array($result);
 }
 
+
+//************************* FRONT END FUNCTION start ************************************
 function get_product(){
     $query = query("SELECT * FROM products");
     confirm($query);
@@ -35,8 +37,7 @@ function get_product(){
                             <a href="item.php?id={$row['produt_id']}"><img src="{$row['product_image']}" alt=""></a>
                             <div class="caption">
                                 <h4 class="pull-right">{$row['product_price']}</h4>
-                                <h4><a href="product.html">{$row['product_title']}</a>
-                                </h4>
+                                <h4><a href="item.php?id={$row['produt_id']}">{$row['product_title']}</a></h4>
                                 <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
                                     <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">Add to cart</a>
                             </div>
@@ -67,5 +68,7 @@ function get_category(){
         echo $categories_links;
     }
 }
+
+//************************* FRONT END FUNCTION stop ************************************
 
 ?>
