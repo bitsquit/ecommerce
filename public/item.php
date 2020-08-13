@@ -9,7 +9,7 @@
 
        <?php
 
-       $query = query("SELECT * FROM products WHERE produt_id = " . escape_string($_GET['id']) . " ");
+       $query = query("SELECT * FROM products WHERE product_id = " . escape_string($_GET['id']) . " ");
        confirm($query);
 
        while($row = fetch_array($query)):
@@ -23,7 +23,7 @@
 <div class="row">
 
     <div class="col-md-7">
-       <img class="img-responsive" src="http://placehold.it/700x600" alt="">
+       <img class="img-responsive" src="<?php echo $row['product_image']; ?>" alt="">
 
     </div>
 

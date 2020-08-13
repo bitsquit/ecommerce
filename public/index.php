@@ -13,6 +13,9 @@
                 <div class="row carousel-holder">
                     <?php include(TEMPLATE_FRONT . DS . "slider.php")?>
                 </div>
+<!------------------------------------------------------------------------------>
+                <h1><?php echo $_SESSION['product_1']?></h1>
+<!------------------------------------------------------------------------------>
 
                 <div class="row">
                     <?php get_product()?>
